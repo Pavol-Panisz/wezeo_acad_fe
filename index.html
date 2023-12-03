@@ -2,10 +2,56 @@
 <html>
     <head>
         <title>Openlab.sk - Inštitút stredoškolského odborného vzdelávania zameraný na IT & AI.</title>
+
+        <style>
+        
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            h1 {
+                font-size: 40px;
+                font-weight: normal;
+            }
+            em {
+                font-weight: bold;
+                font-style: normal;
+            }
+
+            header {
+                /* max-width: 1320px; */
+                display: flex;
+                flex-direction: column;
+                margin: auto;
+                align-items: center;
+            }
+            header > p, nav {
+                padding: 20px;
+            }
+            nav {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+            nav > ol {  
+                display: flex;
+                flex-direction: row;
+                list-style: none;
+            }
+            nav > ol > li {
+                padding: 0 15px;
+            }
+            
+
+            
+
+
+        </style>
+
     </head>
     <body> 
         <header>
-            
             <p>
                 Ak máš záujem študovať spolu s nami, sme tu pre teba…
                 <button>
@@ -16,7 +62,6 @@
                 </button>    
             </p>
             
-            <p>
                 <nav>
                     <img src="images/openlab-logo.svg">
                     <ol>
@@ -34,659 +79,8 @@
                         </a>
                     </button>    
                 </nav>
-            </p>
-
         </header>
 
-        <!-- first section, the introductory one-->
-        <section>
-            <h1>
-                Inštitút stredoškolského odborného vzdelávania <em>zameraný na IT & AI</em>
-            </h1>
-            <p>
-                Realizujeme odborné vzdelávanie zamerané na IT pre štátne školy ako nový štandard formálneho vzdelávania
-            </p>
-            <img src="images/main-home.webp" width="30%">
-        </section>
-
-        <!-- second section, why openlab? -->
-        <section>
-            <h1>
-                Prečo <em>OpenLab?</em>
-            </h1>
-            <p>
-                V OpenLabe študentov učíme najnovšie technológie. Zároveň im dávame veľkú slobodu, pričom ich vedieme k zodpovednosti a samostatnosti, učíme ich princípy partnerského prístupu, pracovať v tíme, trénujeme ich schopnosti sebareflexie a podnecujeme ich kreativitu. Takto študentov pripravujeme osobnostne aj tech zručnosťami na veľké veci, ktoré môžu v budúcnosti tvoriť.
-            </p>
-            <ol>
-                <li>
-                    <img src="images/select.svg">
-                    <h2>Celospoločenský rozvoj</h2>
-                    Osnovy aj učebné materiály pre všetky tech oblasti sú open source.
-                </li>
-                <li>
-                    <img src="images/support.svg">
-                    <h2>Učenie praxou</h2>
-                    Študentov vedieme k tímovému riešeniu problémov.
-                </li>
-                <li>
-                    <img src="images/intership.svg">
-                    <h2>Rozvoj talentu</h2>
-                    Vytvárame šikovné tímy schopné riešiť veľké problémy.
-                </li>
-            </ol>
-        </section>
-
-        <!-- third section, openlab's vision -->
-        <section>
-            <h1>
-                Naša vízia v <em>OpenLabe</em>
-            </h1>
-            <p>
-                Veríme, že otvorený prístup a kvalitné vzdelanie sú základom úspechu jednotlivca ako aj prosperujúcej spoločnosti.
-            </p>
-            <p>
-                Uvedomujeme si, že ak chceme niečo zmeniť, musíme ísť príkladom. Našim cieľom je rozšíriť princípy OpenLab-u na všetkých úrovniach škôl a nastaviť svetový štandard vzdelávania v školstve v technológiách.
-            </p>
-
-            <ol>
-                <li>
-                    <em>7</em> tried
-                </li>
-                <li>
-                    <em>330</em> študentov
-                </li>
-                <li>
-                    <em>25</em> LabMastrov
-                </li>
-                <li>
-                    <em>2</em> školy
-                </li>
-            </ol>
-        </section>
-
-        <!-- fourth section, what labs? -->
-        <section>
-            <h1>
-                V akých Laboch <em>možeš študovať?</em>
-            </h1>
-
-            <ol>
-                <li>
-                    <h2><em>Hybrid</em>Lab</h2>
-                    <p>
-                        Študenti sa učia vyvíjať hybridné aplikácie v HTML, PHP, CSS, JavaScript, Ionicu, Vue a OctoberCMS.
-                    </p>
-                </li>
-                <li>
-                    <h2><em>Games</em>Lab</h2>
-                    <p>
-                        Študenti vyvíjajú mobilné hry v Unity a GDevelop, učia sa tvoriť 2D grafiku v programe Piskel, 3D grafiku v programe Blender a herný dizajn.
-                    </p>
-                </li>
-                <li>
-                    <h2><em>Apps</em>Lab</h2>
-                    <p>
-                        Študenti sa učia vyvíjať mobilné aplikácie v C# a Xamarin.forms a webové aplikácie v Java a Angular JS.
-                    </p>
-                </li>
-            </ol>
-        </section>
-
-        <!-- fifth section, where are the labs? -->
-        <section>
-            <h1>
-                <em>Nachádzame sa</em> na dvoch školách
-            </h1>
-
-            <ol>
-                <li>
-                    <figure>
-                        <img src="images/school1.webp" width="30%">
-                        <figcaption>
-                            <img src="images/place.svg">
-                            Hálova 16, Bratislava
-                        </figcaption>
-                    </figure>
-                    <h2>
-                        Stredná Priemyselná Škola Elektrotechnická
-                    </h2>
-                    <a href="https://www.spsehalova.sk">www.spsehalova.sk</a>
-                </li>
-                <li>
-                    <figure>
-                        <img src="images/school2.webp" width="30%">
-                        <figcaption>
-                            <img src="images/place.svg">
-                            Nábrežná 1325, Kysucké Nové Mesto
-                        </figcaption>
-                    </figure>
-                    <h2>
-                        Stredná Priemyselná Škola Informačných Technológií
-                    </h2>
-                    <a href="http://www.spsknm.sk/ssknm/">www.spsknm.sk</a>
-                </li>
-            </ol>
-        </section>
-
-        <!-- sixth section, students say -->
-        <section>
-            <h1>
-                <em>Čo si myslia</em> o OpenLabe študenti?
-            </h1>
-
-            <ol>
-                <li>
-                    <article>
-                        <p>
-                            Openlab mi dal neuveriteľné množstvo skúsenosti do života, super ľudí, s ktorými vďaka stážam pracujem v rovnakej firme a samozrejme mnoho ďalších dôležitých veci pre fungovanie v dnešnej “IT” sfére. Prístup akým sa tu vyučuje je presne taký, aký v dnešnej dobe potrebujeme na stredných školách.
-                        </p>
-                        <img src="images/user-regular.svg">
-                        <div>
-                            <h2>
-                                Marek
-                            </h2>
-                            HybridLab, PDT
-                        </div>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <p>
-                            Som veľmi rád, že som mal na strednej škole možnosť byť súčasťou OpenLabu a získavať vedomosti priamo od ľudí z praxe. Vďaka OpenLabu som už počas strednej skoly stážoval vo firme a naberal skúsenosti na projektoch, ktoré by som napríklad na vysokej škole ťažko naberal.
-                        </p>
-                        <img src="images/user-regular.svg">
-                        <div>
-                            <h2>
-                                Marko
-                            </h2>
-                            HybridLab, PDT
-                        </div>
-                    </article>
-                </li>
-            </ol>
-           
-            <img src="images/students3.webp" width="30%">
-
-        </section>
-
-        <!-- seventh section, join us -->
-        <section>
-            <h1>
-                Pridajte sa k nám <em>My všetci sme OpenLab…</em>
-            </h1>
-
-            <!-- buttons operating the carousel -->
-            <ol>
-                <li>
-                    <button>
-                        <h2>LabMastri</h2>
-                        <p>
-                            Odborníci z praxe, ktorí odovzdávajú študentom svoj know-how v roli mentora 5 hodín týždenne celý školský rok.
-                        </p>
-                    </button>
-                </li>
-                <li>
-                    <button>
-                        <h2>Firmy</h2>
-                        <p>
-                            Technologické firmy sú garantmi obsahu jednotlivých labov, spolupracujú so študentmi na projektoch a v rámci študentských stáží.
-                        </p>
-                    </button>
-                </li>
-                <li>
-                    <button>
-                        <h2>Školy</h2>
-                        <p>
-                            Stredné odborné školy zamerané na digitálne technológie v jednotlivých regiónoch inovujú svoje technologické vzdelávanie.
-                        </p>
-                    </button>
-                </li>
-                <li>
-                    <button>
-                        <h2>Študenti</h2>
-                        <p>
-                            Stredoškoláci so záujmom o najnovšie technológie a silnou vnútornou motiváciou učiť sa nové veci a rozvíjať svoje schopnosti.
-                        </p>
-                    </button>
-                </li>
-            </ol>
-
-            <!-- carousel -->
-            <ol>
-                <li>
-                    <!-- the floating text next to the image -->
-                    <div>    
-                        <h2>
-                            Labmastri v OpenLabe
-                        </h2>
-                        <p>
-                            V OpenLabe sa okrem technologických vedomostí a zručností snažíme rozvíjať aj iné dôležité parametre kvalitných ľudí.
-                        </p>
-                        <p>
-                            Ako sú zodpovednosť, spoľahlivosť, samostatnosť, ale aj tímovosť a vzájomnú komunikáciu. Prijímame výzvy najmä voči svojím vlastným ja.
-                        </p>
-                        <p>
-                            Lenka Kubová
-                            <br>
-                            Hemisfera na SPŠ IT KNM
-                        </p>
-
-                    </div>
-                    <img src="images/join-us/lenka.webp" width="30%">
-                </li>
-
-                <li>
-                    <!-- the floating text next to the image -->
-                    <div>    
-                        <h2>
-                            Firmy v OpenLabe
-                        </h2>
-                        <p>
-                            Technológie sa neustále menia.
-                                Preto to “čo” sa študenti učia
-                                je druhoradé.
-                        </p>
-                        <p>
-                            V prvom rade riešime “prečo” a “ako” sa študenti vzdelávajú. Inými slovami, OpenLab je o prístupe. Ten keď si študenti osvoja, dokážu ho aplikovať na čokoľvek po zvyšok života.
-                        </p>
-                        <p>
-                            <img src="images/join-us/signature1.webp">
-                            Grigor Ayrumyan
-                            <br>
-                            CEO at WEZEO
-                        </p>
-
-                    </div>
-                    <img src="images/join-us/grishi.webp" width="30%">
-                </li>
-
-                <li>
-                    <!-- the floating text next to the image -->
-                    <div>    
-                        <h2>
-                            Školy v OpenLabe
-                        </h2>
-                        <p>
-                            OpenLab nám pomohol, ako zapojiť študentov do špičkového programovania.
-                        </p>
-                        <p>
-                            Je to náš príspevok ako podnietiť talentované deti, aby na sebe tvrdo makali a už počas štúdia si zarábali programovaním vo firmách a hlavne boli úspešní pri štúdiu na vysokých školách, resp. ich vyhľadávali firmy pre ich kvalitné vzdelanie a prístup k práci. Úprimne si želám, aby škola fungovala ako úspešná, moderná výchovno-vzdelávacia inštitúcia, ale zároveň mala svoju dušu a otvorené srdce pre študentov. Takisto aby mala pedagógov s odvahou a chuťou priniesť do vyučovacieho procesu nové metódy a prístupy.
-                        </p>
-                        <p>
-                            Milan Válek
-                            <br>
-                            Riaditeľ SPŠ IT, Kysucké Nové Mesto
-                        </p>
-
-                    </div>
-                    <img src="images/join-us/riaditel.webp" width="30%">
-                </li>
-
-                <li>
-                    <!-- the floating text next to the image -->
-                    <div>    
-                        <h2>
-                            Študenti v OpenLabe
-                        </h2>
-                        <p>
-                            OpenLab mi poskytol šancu, ktorú by mi ako stredoškolákovi nedal nikto iný.
-                        </p>
-                        <p>
-                            Na OpenLabe je skvelé, že Vám poskytujú veľké množstvo príležistostí ale aj skvelé vzdelanie nielen v programovaní ale napr. aj v projekt managemente a podnikaní. Som veľmi rád, že som jeho súčasťou.
-                        </p>
-                        <p>
-                            Samuel Uhliar
-                            <br>
-                            Študent HybridLabu na SPŠE Hálová 16
-                        </p>
-
-                    </div>
-                    <img src="images/join-us/samuel.webp" width="30%">
-                </li>
-            </ol>
-
-        </section>
-
-        <!-- eights section, student projects -->
-        <section>
-            <h1>
-                Pozrite si <em>študentské projekty</em>
-            </h1>
-            <p>
-                Stredoškoláci v OpenLaboch pracujú na reálnych projektoch v spolupráci s firmami pričom získavajú praktické zručnosti a osvojujú si prístup, ktorým neskôr posunú svet technológií a celú spoločnosť vpred.
-            </p>
-
-            <h2>
-                Projekty študentov v <em>OpenLabe</em>
-            </h2>
-
-            <!-- carousel -->
-            <ol>
-                <li>
-                    <article>
-                    <h3>
-                        Študentský projekt Renmo z AppsLabu
-                    </h3>
-                    <p>
-                        <em>Renmo</em> je softvérová aplikácia, ktorá slúži ako rezervačný systém. Užívateľ si 
-                        vie prostredníctvom systému ľahko a rýchlo zarezervovať rôzne služby, napr. objednať 
-                        sa ku kaderníkovi. V aplikácii si takisto firmy vedia nastaviť detailné informácie o 
-                        sebe a ponuku svojich služieb. Aplikácia vie uľahčiť prácu aj zamestnancom, ktorí vidia 
-                        aktívne rezervácie pre daný deň ale aj nasledujúce.
-                        <br>
-                        Na vývoj študenti použili technológie: MySQL, SpringBoot a Angular.
-                    </p>
-                    </article>
-
-                    <iframe width="420" height="315" src="https://youtu.be/H1G1pAuRBtY"></iframe> 
-                </li>
-
-                <li>
-                    <article>
-                    <h3>
-                        Študentský projekt Mapovanie z HybridLabu
-                    </h3>
-                    <p>
-                        <em>Mapovanie</em> je hybridná aplikácia, ktorá umožní ľuďom so spoločnými záľubami deliť 
-                        sa o svoje obľúbené miesta a ukladať ich do komunitnej mapy. Aplikáciu tak môžu využívať 
-                        ľudia z rôznych komunít. Užívateľ sa jednoducho pridá do skupiny, ktorá ho zaujíma, a následne 
-                        môže vidieť už “zmapované” miesta alebo pridávať nové. Prehľad príspevkov a skupín mu 
-                        zobrazuje dostupná mapa. Do aplikácie sa užívateľ vie prihlásiť cez SSO, t.j. prihlásenie 
-                        pomocou služby tretej strany, napr. Facebook alebo Apple ID účet. Na vývoj študenti použili 
-                        technológie - Ionic, OctoberCMS a Vue. Aktuálne je aplikácia v MVP verzii.
-                    </p>
-                    </article>
-
-                    <iframe width="420" height="315" src="https://youtu.be/H1G1pAuRBtY"></iframe> 
-                </li>
-            </ol>
-
-            <button>
-                <img src="images/arrows/circle-arrow-left.svg">
-            </button>
-
-            <button>
-                <img src="images/arrows/circle-arrow-right.svg">
-            </button>
-
-            <a href="https://www.youtube.com/channel/UCinIL-0-qCLU6zE5fo1SPNw">
-                Pozrite si všetky projekty
-            </a>
-
-        </section>
-
-        <!-- ninth section, what makes us special -->
-        <section>
-            <h1>
-                Čím sme <em>výnimoční?</em>
-            </h1>
-
-            <ol>
-                <li>
-                    <img src="images/why-special/special1.svg">
-                    <h2>
-                        Partnerstvo
-                    </h2>
-                    <p>
-                        Dáva študentom slobodu, ktorú vyvažujú zodpovednosťou. Spolupráca LabMastra a študentov je v partnerskej rovine.
-                    </p>
-                </li>
-                <li>
-                    <img src="images/why-special/special2.svg">
-                    <h2>
-                        LabMaster
-                    </h2>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur, esse!
-                    </p>
-                </li>
-                <li>
-                    <img src="images/why-special/special3.svg">
-                    <h2>
-                        Učebný blok
-                    </h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, placeat.
-                    </p>
-                </li>
-                <li>
-                    <img src="images/why-special/special4.svg">
-                    <h2>
-                        Problem driven
-                    </h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit reiciendis quae saepe laboriosam quidem? Ratione?
-                    </p>
-                </li>
-                <li>
-                    <img src="images/why-special/special5.svg">
-                    <h2>
-                        Project driven
-                    </h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ratione laudantium doloribus!
-                    </p>
-                </li>
-                <li>
-                    <img src="images/why-special/special6.svg">
-                    <h2>
-                        Samoštúdium
-                    </h2>
-                    <p>
-                        Študenti trávia 80% času samoštúdiom a sú vedení k tímovej spolupráci. 20% teórie slúži iba ako odrazový mostík.
-                    </p>
-                </li>
-
-            </ol>
-        </section>
-
-        <!-- tenth section, get to know us -->
-        <section>
-            <h1>
-                Spoznaj nás
-            </h1>
-            <ol>
-                <li>
-                    <img src="images/get-to-know/marko-hrivnak.jpg" width="20%">
-                    <br>
-                    Role 1<br>
-                    Name<br>
-                    Role 2
-                </li>
-                <li>
-                    <img src="images/get-to-know/grishi.webp" width="20%">
-                    <br>
-                    Role 1<br>
-                    Name<br>
-                    Role 2
-                </li>
-                <li>
-                    <img src="images/get-to-know/janic.webp" width="20%">
-                    <br>
-                    Role 1<br>
-                    Name<br>
-                    Role 2
-                </li>
-                <li>
-                    <img src="images/get-to-know/matija.webp" width="20%">
-                    <br>
-                    Role 1<br>
-                    Name<br>
-                    Role 2
-                </li>
-                <li>
-                    <img src="images/get-to-know/veronika.webp" width="20%">
-                    <br>
-                    Role 1<br>
-                    Name<br>
-                    Role 2
-                </li>
-                <li>
-                    <img src="images/get-to-know/viktoria.webp" width="20%">
-                    <br>
-                    Role 1<br>
-                    Name<br>
-                    Role 2
-                </li>
-
-            </ol>
-        </section>
-
-        <!-- eleventh section, support us -->
-        <section>
-            <img src="images/ludia-ludom.webp" width="30%">
-            <h1>
-                Podporte nás
-            </h1>
-            <p>
-                OpenLab postupne rozširujeme ako neziskový vzdelávací projekt s cieľom otvoriť OpenLab-y zamerané na rôzne IT technológie na čo najväčší počet škôl vo všetkých slovenských regiónoch. Veríme, že OpenLab bude natoľko úspešný, že sa stane štandardom vzdelávania na Slovensku!
-            </p>
-            <a href="https://www.ludialudom.sk/profil/detail/41588">Chcem podporiť</a>
-        </section>
-
-        <!-- twelvth section, partners -->
-        <section>
-            <h1>
-                Kto stojí<br>
-                <em>za Openlabom?</em>
-            </h1>
-            <ol>
-                <li>
-                    <img src="images/partners/wezeo.svg">
-                </li>
-                <li>
-                    <img src="images/partners/siemens.svg">
-                </li>
-                <li>
-                    <img src="images/partners/spse.svg">
-                </li>
-                <li>
-                    <img src="images/partners/spsit.svg">
-                </li>
-                <li>
-                    <img src="images/partners/hemisfera.svg">
-                </li>
-            </ol>
-        </section>
-
-        <!-- skipped section 13 with the instagram posts, didnt know how to do it -->
-
-        <!-- fourteenth section, podcast -->
-        <section>
-            <div>
-                <h1>
-                    Nie je moderná škola<br>
-                    <em>ako moderná škola</em>
-                </h1>
-                <p>
-                    Podcast Moderná škola vznikol v spolupráci s Romanom ”Yablkom” Hraškom, kde našim zámerom je rozobrať svet štandardného vzdelávania a spôsob ako môže fungovať moderné vzdelávanie v technológiach.
-                </p>
-                <ol>
-                    <li>
-                        <img src="images/podcast/youtube.svg">
-                    </li>
-                    <li>
-                        <img src="images/podcast/spotify.svg">
-                    </li>
-                    <li>
-                        <img src="images/podcast/google.svg">
-                    </li>
-                    <li>
-                        <img src="images/podcast/podcast.svg">
-                    </li>
-                </ol>
-            </div>
-            <div>
-                <img src="images/podcast/modern.webp" width="40%">
-            </div>
-        </section>
-
-        <!-- fifteenth section, 2023 support -->
-        <section>
-            <h1>
-                Ďakujeme za <em>podporu v roku 2023!</em>
-            </h1>
-            <ol>
-                <li>
-                    <img src="images/support-2023/accenture-logo.webp" width="12%">
-                </li>
-                <li>
-                    <img src="images/support-2023/binary-confidence.webp" width="12%">
-                </li>
-                <li>
-                    <img src="images/support-2023/impact_lab.webp" width="12%">
-                </li>
-                <li>
-                    <img src="images/support-2023/kontentino.png" width="12%">
-                </li>
-                <li>
-                    <img src="images/support-2023/logo datalan.webp" width="12%">
-                </li>
-                <li>
-                    <img src="images/support-2023/Medirex-21024_1.webp" width="12%">
-                </li>
-                <li>
-                    <img src="images/support-2023/pontis.svg" width="12%">
-                </li>
-                <li>
-                    <img src="images/support-2023/posam.webp" width="12%">
-                </li>
-                <li>
-                    <img src="images/support-2023/startitup.svg" width="12%">
-                </li>
-                <li>
-                    <img src="images/support-2023/superfaktura.webp" width="12%">
-                </li>
-                <li>
-                    <img src="images/support-2023/support1.svg" width="12%">
-                </li>
-                <li>
-                    <img src="images/support-2023/support6.svg" width="12%">
-                </li>
-            </ol>
-        </section>
-
-        <!-- sixteenth section, newsletter sub -->
-        <section>
-            <p>
-                Prihláste sa do nášho newslettra a budete mať<br>
-                <em>čerstvé informácie o živote v OpenLabe.</em>
-            </p>
-            <form>
-                <input type="text" placeholder="Sem napíšte svoj email">
-            </form>
-        </section>
-
-        <footer>
-            <!-- openlab logo -->
-            <div>
-                <img src="images/openlab-logo.svg">
-                © 2023 Všetky práva vyhradené OPENLAB, o.z.,
-            </div>
-            <!-- ICO -->
-            <div>
-                IČO: 50764675
-                <br>
-                Pribinova 10, 821 09 Bratislava
-            </div>
-            <!-- cookies gdpr -->
-            <div>
-                info@openlab.sk
-                <br>
-                CookiesGDPR                
-            </div>
-            <!-- social media links -->
-            <div>
-                <a href="https://www.facebook.com/OpenLab.sk/"></a>
-                <img src="images/footer/facebook.svg">
-
-                <a href="https://www.linkedin.com/company/openlab-sk/?trk=public_profile_topcard_current_company&originalSubdomain=sk/"></a>
-                <img src="images/footer/linkedin.svg">
-
-                <a href="https://www.instagram.com/openlab.sk?igshid=1xz2g75a3yzu1"></a>
-                <img src="images/footer/instagram.svg">
-            </div>
-        </footer>
 
     </body>
 </html>
