@@ -5,6 +5,8 @@
 
         <style>
         
+            /* -------------- general & helper classes -------------- */
+
             /* * {
                 margin: 0;
                 padding: 0;
@@ -34,9 +36,16 @@
                 padding: 0 12px 0 12px;
                 margin: auto; /* without this, it'd be on the left */
             }
+            /* the default container behaviour is to make it full width,
+               but you can override it to be centered with the .center class */
             .container > * {
                 width: 100%;
             }
+            .center > * {
+                width: auto;
+            }
+
+            /* ------------------ header ------------------ */
 
             #header-discord {
                 border-style: solid;
@@ -49,11 +58,9 @@
                 height: 35px;
             }
             nav {
-                width: 100%;
                 display: flex;
                 align-items: center;
-                /* justify-content: space-around; */
-                margin: 0 0 50px 0;
+                margin: 10px 0 20px 0;
             }
             nav > ol {
                 display: flex;
@@ -64,27 +71,31 @@
                 padding: 0px 20px 0px 20px;
             }
 
+            /* ------------------ first section ------------------ */
+
             #what-section-background {
                 background-color:#3597FF;
             }
             #what-content {
                 display: flex;
-                width: 100%;
                 flex-direction: row;
                 align-items: center;
                 justify-content: flex-start;
+                height: 450px;
             }
             #what-text {
                 width: 450px;
+                margin-right: 150px;
             }
             #what-text > * {
                 color: white;
                 margin-right: auto;
             }
             #what-image {
-                height: 450px;
+                height: 400px;
+                align-self: flex-end;
             }
-            #what-o {
+            #what-letter-o {
                 width: 500px;
                 float: right;
                 margin-right: -250px;
@@ -98,7 +109,7 @@
     </head>
     <body> 
         <header>
-            <div class="container" id="header-discord">
+            <div class="container center" id="header-discord">
                 <p>
                     Ak máš záujem študovať spolu s nami, sme tu pre teba…
                     <button>
@@ -148,7 +159,7 @@
                     </div>
                 </div>
             </div>
-            <img src="images/floating-letters/o_letter.webp" id="what-o">
+            <img src="images/floating-letters/o_letter.webp" id="what-letter-o">
         </section>
 
     </body>
