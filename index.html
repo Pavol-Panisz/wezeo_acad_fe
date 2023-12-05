@@ -26,28 +26,26 @@
                 font-style: normal;
             }
 
-            /* basically the same as bootstrap's container. 
-               should contain only 1 child */
+            /* centers its child and constraints it to max 1320px-wide */
             .container {
                 display: flex;
+                flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 max-width: 1296px;
                 padding: 0 12px 0 12px;
-                margin: auto; /* without this, it'd be on the left */
+                margin: auto;
             }
-            /* the default container behaviour is to make it full width,
-               but you can override it to be centered with the .center class */
-            .container > * {
-                width: 100%;
+            .fw {           /* full-width */
+                width: 100%; 
+                padding: 0 15px 0 15px;
             }
-            .center > * {
-                width: auto;
-            }
+            
+
 
             /* ------------------ header ------------------ */
 
-            #header-discord {
+            #header-discord-bar {
                 border-style: solid;
                 border-width: 0px 0px 0.8px 0px;
                 border-color: lightgray;
@@ -80,25 +78,17 @@
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                justify-content: flex-start;
                 height: 450px;
             }
-            #what-text {
-                width: 450px;
-                margin-right: 150px;
-            }
-            #what-text > * {
-                color: white;
-                margin-right: auto;
-            }
+            
             #what-image {
                 height: 400px;
                 align-self: flex-end;
             }
             #what-letter-o {
                 width: 500px;
-                float: right;
-                margin-right: -250px;
+                position: absolute;
+                right: -250px;
                 margin-top: -250px;
             }
             
@@ -108,46 +98,44 @@
 
     </head>
     <body> 
-        <header>
-            <div class="container center" id="header-discord">
-                <p>
-                    Ak máš záujem študovať spolu s nami, sme tu pre teba…
-                    <button>
-                        <a href="https://discord.com/invite/fjRmVdzXcU">
-                            OPENLAB COMMUNITY
-                        </a>
-                        <img src="images/discord.svg">
-                    </button>    
-                </p>
-            </div>
+        <header class="container">
+            
+            <p>
+                Ak máš záujem študovať spolu s nami, sme tu pre teba…
+                <button>
+                    <a href="https://discord.com/invite/fjRmVdzXcU">
+                        OPENLAB COMMUNITY
+                    </a>
+                    <img src="images/discord.svg">
+                </button>    
+            </p>
+            <div class="fw" id="header-discord-bar"></div>
 
-            <div class="container">
-                <nav>
-                    <img src="images/openlab-logo.svg" id="header-logo">
-                    <ol>
-                        <li>Úvod</li>
-                        <li>OpenLab</li>
-                        <li>Online hodiny</li>
-                        <li>Pre učiteľov</li>
-                        <li>Partneri</li>
-                        <li>Moderná škola</li>
-                        <li>Časté otázky</li>
-                    </ol>
-                    <button class="header-button">
-                        <a href=https://openlab.sk/openlaby/">
-                            Pridajte sa k nám
-                        </a>
-                    </button>    
-                </nav>
-            </div>
+            <nav class="fw">
+                <img src="images/openlab-logo.svg" id="header-logo">
+                <ol>
+                    <li>Úvod</li>
+                    <li>OpenLab</li>
+                    <li>Online hodiny</li>
+                    <li>Pre učiteľov</li>
+                    <li>Partneri</li>
+                    <li>Moderná škola</li>
+                    <li>Časté otázky</li>
+                </ol>
+                <button class="header-button">
+                    <a href=https://openlab.sk/openlaby/">
+                        Pridajte sa k nám
+                    </a>
+                </button>    
+            </nav>
+        
         </header>
 
         <!-- first section, the introductory one a.k.a what -->
-        <section>
-            <div id="what-section-background">
-                <div class="container">
-                    <div id="what-content">
-                        <div id="what-text">
+        <section class="container fw">
+                    <div id="what-content fw">
+                        a
+                        <!-- <div id="what-text">
                             <h1>
                                 Inštitút stredoškolského<br>odborného vzdelávania<br><em>zameraný na IT & AI</em>
                             </h1>
@@ -155,11 +143,16 @@
                                 Realizujeme odborné vzdelávanie zamerané na IT pre štátne školy ako nový štandard formálneho vzdelávania
                             </p>
                         </div>
-                        <img src="images/main-home.webp" id="what-image">
+                        <img src="images/main-home.webp" id="what-image"> -->
                     </div>
-                </div>
+            <!-- <img src="images/floating-letters/o_letter.webp" id="what-letter-o"> -->
+        </section>
+
+        <!-- second section, why openlab? -->
+        <section class="container">
+            <div>
+                ahoj
             </div>
-            <img src="images/floating-letters/o_letter.webp" id="what-letter-o">
         </section>
 
     </body>
