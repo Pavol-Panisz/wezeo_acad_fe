@@ -12,6 +12,14 @@
                 padding: 0;
             } 
 
+            a {
+                text-decoration: none;
+            }
+
+            ol {
+                list-style: none;
+            }
+
             body {
                 margin: 0;
                 padding: 0;
@@ -24,9 +32,33 @@
                 font-size: 40px;
                 font-weight: normal;
             }
+            h2 {
+                font-weight: normal;
+            }
+            h3 {
+                font-weight: normal;
+            }
             em {
                 font-weight: bold;
                 font-style: normal;
+            }
+
+            .f16px { font-size: 16px; }
+            .f30px { font-size: 30px; }
+            .f35px { font-size: 35px; }
+            .f40px { font-size: 40px; }
+
+            .text-gray { color: #6b7d9b; }
+            .text-white { color: white; }
+            
+            .text-center { text-align: center; }
+
+            .lr-buttons {
+                margin-left: auto;
+            }
+            .lr-buttons img {
+                width: 40px;
+
             }
 
             /* centers its child and constraints it to max 1320px-wide */
@@ -55,6 +87,35 @@
             .padded-vertical {
                 padding: 14px 0px 14px 0px;
             }
+
+            .card {
+                padding: 14px 25px 50px 25px;
+                margin: 5px;
+                flex-basis: 0;
+                flex-grow: 1;
+                position: relative;
+                border-radius: 5px;
+            }
+            .card:hover {
+                box-shadow: 0 3px 20px rgb(0 0 0 / 0.1);
+            }
+            .card:hover > .card-arrow {
+                left: 40px;
+            }
+            .card-arrow {
+                position: absolute;
+                bottom: 20px;
+            }
+
+            .icon {
+                width: 20px;
+            }
+            .letter {
+                position: absolute;
+                width: 500px;
+                right: -250px;
+                margin-top: -250px;
+            }
             
             /* ------------------ header ------------------ */
             #header-line {
@@ -68,7 +129,6 @@
                 margin-right: -12px;
             }
             #header-nav-list {
-                list-style: none;
                 margin-left: 45px;
                 margin-right: auto; /* since the width is 100%, it pushes the button to the right */
             }
@@ -89,28 +149,193 @@
                 height: 500px;
                 z-index: 1; /* so that the o-letter is "behind" it */
             }
-            #what-letter {
-                position: absolute;
-                width: 500px;
-                right: -250px;
-                margin-top: -250px;
-            }
 
             /* ------------------ section 2 "why" ------------------ */
             #why {
                 margin-top: 100px;
+                margin-bottom: 100px;
             }
             #why-p {
                 padding: 60px 0px 60px 0px;
                 width: 1000px;
                 text-align: center;
             }
-            #why-list {
-                list-style: none;
-            }
             #why-list > li {
                 width: 300px;
                 margin-right: 30px
+            }
+
+            #vision {
+                height: 450px;
+            }
+            #vision-text {
+                width: 550px;
+                margin-right: auto;
+            }
+            #vision-grid {
+                display: grid;
+                grid-template-rows: 50% 50%;
+                grid-template-columns: 50% 50%;
+                column-gap: 15px;
+                row-gap: 15px;
+                width: 480px;
+                height: 360px;
+
+                padding-right: 14px; 
+                
+            }
+            #vision-grid li {
+                text-align: end;
+                align-self: stretch;
+                padding: 45px 30px 0px 0px;
+                border-radius: 5px;
+            }
+            #vision-grid li:nth-child(1) {
+                background-color: aliceblue;
+            }
+            #vision-grid li:nth-child(2) {
+                background-color:#d7f8eb;
+            }
+            #vision-grid li:nth-child(3) {
+                background-color:#f8f3d7;
+            }
+            #vision-grid li:nth-child(4) {
+                background-color:#f8d7d7;
+            }
+            #vision-grid li:nth-child(1) * {
+                color: #5b94d7;
+            }
+            #vision-grid li:nth-child(2) * {
+                color:#5cc19a;
+            }
+            #vision-grid li:nth-child(3) * {
+                color:#dbca68;
+            }
+            #vision-grid li:nth-child(4) * {
+                color:#b95e73;
+            }
+            #vision-grid li em {
+                display: block;
+                font-size: 80px;
+            }
+            #vision-grid-text {
+                font-size: 20px;
+            }
+
+            #labs {
+                margin: 150px auto;
+            }
+            #labs-text {
+                flex-grow: 1;
+                flex-basis: 0;
+                align-self: center;
+            }
+            #labs-list {
+                flex-grow: 2;
+                flex-basis: 0;
+            }
+
+            #schools {
+                margin-bottom: 150px;
+            }
+            #schools-list {
+                justify-content: space-evenly;
+                height: 400px;
+            }
+            #schools-school {
+                margin: 60px;
+                z-index: 1; /* so that the letter P doesn't obscure the content */
+            }
+            #schools-image {
+                width: 100%;
+            }
+            #schools-letter {
+                width: 450px;
+            }
+
+            #students {
+                background-color: aliceblue;
+                padding-top: 35px;
+            }
+            #students-image {
+                height: 550px;
+                margin-left: 150px;
+            }
+            #students-quote {
+                position: relative;
+                margin: 40px 15px;
+            }
+            #students-quote-text {
+                padding-right: 30px;
+            }
+            #students-quote-img {
+                position: absolute;
+                width: 70px;
+                top: -45px;
+                opacity: 15%;
+            }
+
+            #join {
+                padding: 100px 0px;
+            }
+            #join-carousel {
+                margin-top: 70px;
+            }
+            #join-heading {
+                text-align: center;
+                padding-bottom: 50px;
+            }
+            #join-text {
+                background-color: #a54fa2;
+                width: 500px;
+                height: 450px;
+                border-radius: 5px;
+                padding: 40px 30px;
+            }
+            #join-text-line {
+                width: 50px;
+                border-bottom: 0.8px solid gainsboro;
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
+            #join-carousel-item {
+                position: relative;
+            }
+            #join-carousel-image {
+                position: absolute;
+                top: 80px;
+                right: 0px;
+                z-index: -1;
+                border-radius: 20px;   
+
+                object-fit: cover;
+                height: 500px;
+                width: 950px;
+            }
+
+            #projects {
+                padding: 100px 0px;
+            }
+            #projects-subheading {
+                margin-top: 50px;
+                margin-bottom: 100px;
+            }
+            #projects-line {
+                width: 50px;
+                border-bottom: 0.8px solid gray;
+                margin: 25px 0px;
+            }
+            #projects-text {
+                
+                
+                padding-right: 300px;
+            }
+            #projects-image {
+                
+                
+                width: 610px; /* width expands up to "one half of the flex-row" */
+                border-radius: 15px;
+                /* margin-left: 20px; */
             }
 
         </style>
@@ -163,7 +388,7 @@
                 </div>
                 <img src="images/main-home.webp" id="what-image" class="flex-align-bottom">
             </div>
-            <img src="images/floating-letters/o_letter.webp" id="what-letter">
+            <img src="images/floating-letters/o_letter.webp" class="letter">
         </section>
 
         <!-- second section, why openlab? -->
@@ -191,6 +416,284 @@
                     Vytvárame šikovné tímy schopné riešiť veľké problémy.
                 </li>
             </ol>
+        </section>
+
+        <!-- third section, openlab's vision -->
+        <section id="vision" class="container flex-row">
+            <div id="vision-text" class="flex-align-center">
+                <h1>
+                    Naša vízia v <em>OpenLabe</em><br><br>
+                </h1>
+                <p>
+                    Veríme, že otvorený prístup a kvalitné vzdelanie sú základom úspechu jednotlivca ako aj prosperujúcej spoločnosti.<br><br>
+                </p>
+                <p>
+                    Uvedomujeme si, že ak chceme niečo zmeniť, musíme ísť príkladom. Našim cieľom je rozšíriť princípy OpenLab-u na všetkých úrovniach škôl a nastaviť svetový štandard vzdelávania v školstve v technológiách.
+                </p>
+            </div>
+
+            <ol id="vision-grid" class="flex-align-center">
+                <li>
+                    <em id="vision-grid-number">7</em>
+                    <span id="vision-grid-text">tried</span>
+                </li>
+                <li>
+                    <em id="vision-grid-number">330</em>
+                    <span id="vision-grid-text">študentov</span>
+                </li>
+                <li>
+                    <em id="vision-grid-number">25</em>
+                    <span id="vision-grid-text">LabMastrov</span>
+                </li>
+                <li>
+                    <em id="vision-grid-number">2</em>
+                    <span id="vision-grid-text">školy</span>
+                </li>
+            </ol>
+
+        </section>
+
+        <!-- fourth section, what labs? -->
+        <section id="labs" class="container flex-row">
+            <h1 id="labs-text">
+                V akých Laboch<br><em>možeš študovať?</em>
+            </h1>
+
+            <ol id="labs-list" class="flex-row">
+                <li class="card">    
+                    <h2><em>Hybrid</em>Lab</h2>
+                    <p>
+                        Študenti sa učia vyvíjať hybridné aplikácie v HTML, PHP, CSS, JavaScript, Ionicu, Vue a OctoberCMS.
+                    </p>
+                    <img src="images/arrows/arrow-right-solid.svg" class="card-arrow">
+                </li>
+            
+                <li class="card">
+                    <h2><em>Games</em>Lab</h2>
+                    <p>
+                        Študenti vyvíjajú mobilné hry v Unity a GDevelop, učia sa tvoriť 2D grafiku v programe Piskel, 3D grafiku v programe Blender a herný dizajn.
+                    </p>
+                    <img src="images/arrows/arrow-right-solid.svg" class="card-arrow">
+                </li>
+            
+                <li class="card">
+                    <h2><em>Apps</em>Lab</h2>
+                    <p>
+                        Študenti sa učia vyvíjať mobilné aplikácie v C# a Xamarin.forms a webové aplikácie v Java a Angular JS.
+                    </p>
+                    <img src="images/arrows/arrow-right-solid.svg" class="card-arrow">
+                </li>
+            </ol>
+        
+
+        </section>
+
+        <!-- fifth section, which schools? -->
+        <section id="schools">
+            <div class="container">
+                <h1 class="center padded-around">
+                    <em>Nachádzame sa</em> na dvoch školách
+                </h1>
+
+                <ol id="schools-list" class="flex-row">
+                    <li id="schools-school">
+                        <figure>
+                            <img src="images/school1.webp" id="schools-image">
+                            <figcaption class="flex-row padded-vertical">
+                                <img src="images/place.svg">
+                                <p class="flex-align-center">Hálova 16, Bratislava</p>
+                            </figcaption>
+                        </figure>
+                        
+                        <div class="flex-row padded-vertical">
+                            <h2>
+                                Stredná Priemyselná Škola Elektrotechnická
+                            </h2 class="flex-align-bottom">
+                            <a href="https://www.spsehalova.sk" class="flex-align-bottom"><h2>www.spsehalova.sk</h2></a>
+                        </div>
+                    </li>
+                    <li id="schools-school">
+                        <figure>
+                            <img src="images/school2.webp" id="schools-image">
+                            <figcaption class="flex-row padded-vertical">
+                                <img src="images/place.svg">
+                                <p class="flex-align-center">Nábrežná 1325, Kysucké Nové Mesto</p>
+                            </figcaption>
+                        </figure>
+                        
+                        <div class="flex-row padded-vertical">
+                            <h2 class="flex-align-bottom">
+                                Stredná Priemyselná Škola Informačných Technológií
+                            </h2>
+                            <a href="http://www.spsknm.sk/ssknm/" class="flex-align-bottom"><h2>www.spsknm.sk</h2></a>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+            <img src="images/floating-letters/p_letter.webp" id="schools-letter" class="letter">
+        </section>
+
+        <!-- sixth section, students say -->
+        <section id="students">
+            <div class="container flex-row">
+                <div class="flex-align-bottom">
+                    <h1>
+                        <em>Čo si myslia</em><br>o OpenLabe študenti?
+                    </h1>
+
+                    <ol>
+                        <li id="students-quote">
+                            <img src="images/quote-left-solid.svg" id="students-quote-img">
+                            <article>
+                                <p id="students-quote-text">
+                                    Openlab mi dal neuveriteľné množstvo skúsenosti do života, super ľudí, s ktorými vďaka stážam pracujem v rovnakej firme a samozrejme mnoho ďalších dôležitých veci pre fungovanie v dnešnej “IT” sfére. Prístup akým sa tu vyučuje je presne taký, aký v dnešnej dobe potrebujeme na stredných školách.
+                                </p>
+                                <br>
+                                <div class="flex-row">
+                                    <img src="images/user-regular.svg" class="icon">
+                                    <div class="padded-around">
+                                        <h2>
+                                            Marek
+                                        </h2>
+                                        HybridLab, PDT
+                                    </div>
+                                    <div class="lr-buttons flex-align-center">
+                                        <img src="images/arrows/circle-arrow-left.svg">
+                                        <img src="images/arrows/circle-arrow-right.svg">
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                    </ol>
+                </div>
+            
+                <img src="images/students3.webp" id="students-image">
+            </div>
+        </section>
+
+        <!-- seventh section, join us -->
+        <section id="join">
+            <h1 class="center container" id="join-heading">
+                Pridajte sa k nám<em><br>My všetci sme OpenLab…</em>
+            </h1>
+
+            <!-- buttons operating the carousel -->
+            <ol class="container flex-row">
+                <li class="card">
+                    <h2>LabMastri</h2>
+                    <p>
+                        Odborníci z praxe, ktorí odovzdávajú študentom svoj know-how v roli mentora 5 hodín týždenne celý školský rok.
+                    </p>
+                    <img src="images/arrows/arrow-right-solid.svg" class="card-arrow">
+                </li>
+                <li class="card">
+                    <h2>Firmy</h2>
+                    <p>
+                        Technologické firmy sú garantmi obsahu jednotlivých labov, spolupracujú so študentmi na projektoch a v rámci študentských stáží.
+                    </p>
+                    <img src="images/arrows/arrow-right-solid.svg" class="card-arrow">
+                </li>
+                <li class="card">
+                    <h2>Školy</h2>
+                    <p>
+                        Stredné odborné školy zamerané na digitálne technológie v jednotlivých regiónoch inovujú svoje technologické vzdelávanie.
+                    </p>
+                    <img src="images/arrows/arrow-right-solid.svg" class="card-arrow">
+                </li>
+                <li class="card">
+                    <h2>Študenti</h2>
+                    <p>
+                        Stredoškoláci so záujmom o najnovšie technológie a silnou vnútornou motiváciou učiť sa nové veci a rozvíjať svoje schopnosti.
+                    </p>
+                    <img src="images/arrows/arrow-right-solid.svg" class="card-arrow">
+                </li>
+            </ol>
+
+            <!-- carousel -->
+            <ol id="join-carousel" class="container">
+                <li id="join-carousel-item">
+                    <!-- the floating text next to the image -->
+                    <div id="join-text" class="text-white">    
+                        <h2>
+                            Labmastri v OpenLabe
+                        </h2>
+                        <div id="join-text-line"></div>
+                        
+                        <p class="f35px text-white">
+                            <b>V OpenLabe sa okrem technologických vedomostí a zručností snažíme rozvíjať aj iné dôležité parametre kvalitných ľudí.</b>
+                        </p>
+                        <br><br>
+                        
+                        <p class="f16px text-white">
+                            Ako sú zodpovednosť, spoľahlivosť, samostatnosť, ale aj tímovosť a vzájomnú komunikáciu. Prijímame výzvy najmä voči svojím vlastným ja.
+                        </p>
+                        <br><br><br>
+                        
+                        <p class="f16px text-white">
+                            <b>
+                                Lenka Kubová
+                                <br>
+                                Hemisfera na SPŠ IT KNM
+                            </b>
+                        </p>
+
+                    </div>
+                    <img src="images/join-us/lenka.webp" id="join-carousel-image">
+                </li>
+
+            </ol>
+
+        </section>
+
+        <!-- eights section, student projects -->
+        <section id="projects" class="container">
+            <h1 class="center">
+                Pozrite si <em>študentské projekty</em>
+            </h1>
+            <p id="projects-subheading" class="center text-center">
+                Stredoškoláci v OpenLaboch pracujú na reálnych projektoch v spolupráci s firmami pričom získavajú praktické zručnosti a osvojujú si prístup,<br>ktorým neskôr posunú svet technológií a celú spoločnosť vpred.
+            </p>
+            
+            <h2>
+                Projekty študentov v <em>OpenLabe</em>
+            </h2>
+            <div id="projects-line"></div>
+
+            <!-- carousel -->
+            <ol>
+                <li class="flex-row">
+                    <div id="projects-text">
+                        <article>
+                        <h3 class="f30px">
+                            Študentský projekt Renmo z AppsLabu
+                        </h3>
+                        <br><br>
+                        <p>
+                            <em>Renmo</em> je softvérová aplikácia, ktorá slúži ako rezervačný systém. Užívateľ si 
+                            vie prostredníctvom systému ľahko a rýchlo zarezervovať rôzne služby, napr. objednať 
+                            sa ku kaderníkovi. V aplikácii si takisto firmy vedia nastaviť detailné informácie o 
+                            sebe a ponuku svojich služieb. Aplikácia vie uľahčiť prácu aj zamestnancom, ktorí vidia 
+                            aktívne rezervácie pre daný deň ale aj nasledujúce.
+                            <br>
+                            Na vývoj študenti použili technológie: MySQL, SpringBoot a Šmangular.
+                        </p>
+                        </article>
+                    </div>
+
+                    <img src="images/video-impostor.jpg" id="projects-image">
+                </li>
+            </ol>
+
+            <div class="lr-buttons">
+                <img src="images/arrows/circle-arrow-left.svg">            
+                <img src="images/arrows/circle-arrow-right.svg">
+            </div>  
+            
+            <br><br><br>
+            <a href="https://www.youtube.com/channel/UCinIL-0-qCLU6zE5fo1SPNw">
+                Pozrite si všetky projekty
+            </a>
+
         </section>
 
     </body>
