@@ -54,6 +54,7 @@
                 font-style: normal;
             }
 
+            .f14px { font-size: 14px; line-height: 24px; }
             .f16px { font-size: 16px; line-height: 24px; }
             .f30px { font-size: 30px; line-height: 30px; }
             .f35px { font-size: 35px; line-height: 35px; }
@@ -372,6 +373,34 @@
                 row-gap: 12px; /* the gap between the icon, the heading and the text */
                 align-items: flex-start;
             }
+            #special-letter {
+                z-index: -1;
+                width: 450px;
+            }
+
+            #us {
+                padding: 100px 0px;
+            }
+            #us-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                column-gap: 25px;
+                row-gap: 40px;
+                padding: 100px 0px;
+            }
+            #us-grid li img {
+                width: 100%;
+                border-radius: 5px;
+                margin-bottom: 0px;
+            }
+            #us-grid-name {
+                display: block;
+                font-size: 20px;
+                font-weight: 500;
+                margin-top: 10px;
+                margin-bottom: 0px;
+            }
 
         </style>
 
@@ -681,126 +710,168 @@
         </section>
 
         <!-- eights section, student projects -->
-        <section id="projects">
-            <div class="container">
-                <h1 class="center">
-                    Pozrite si <em>študentské projekty</em>
-                </h1>
-                <p id="projects-subheading" class="center text-center">
-                    Stredoškoláci v OpenLaboch pracujú na reálnych projektoch v spolupráci s firmami pričom získavajú praktické zručnosti a osvojujú si prístup,<br>ktorým neskôr posunú svet technológií a celú spoločnosť vpred.
-                </p>
-                
-                <h2>
-                    Projekty študentov v <em>OpenLabe</em>
-                </h2>
-                <div id="projects-line"></div>
+        <section id="projects" class="container">
+            <h1 class="center">
+                Pozrite si <em>študentské projekty</em>
+            </h1>
+            <p id="projects-subheading" class="center text-center">
+                Stredoškoláci v OpenLaboch pracujú na reálnych projektoch v spolupráci s firmami pričom získavajú praktické zručnosti a osvojujú si prístup,<br>ktorým neskôr posunú svet technológií a celú spoločnosť vpred.
+            </p>
+            
+            <h2>
+                Projekty študentov v <em>OpenLabe</em>
+            </h2>
+            <div id="projects-line"></div>
 
-                <!-- carousel -->
-                <ol class="flex-row">
-                    <li class="flex-row">
-                        <div id="projects-text">
-                            <article>
-                            <h3 class="f30px">
-                                Študentský projekt Renmo z AppsLabu
-                            </h3>
-                            <br><br>
-                            <p class="f16px">
-                                <em>Renmo</em> je softvérová aplikácia, ktorá slúži ako rezervačný systém. Užívateľ si 
-                                vie prostredníctvom systému ľahko a rýchlo zarezervovať rôzne služby, napr. objednať 
-                                sa ku kaderníkovi. V aplikácii si takisto firmy vedia nastaviť detailné informácie o 
-                                sebe a ponuku svojich služieb. Aplikácia vie uľahčiť prácu aj zamestnancom, ktorí vidia 
-                                aktívne rezervácie pre daný deň ale aj nasledujúce.
-                                <br>
-                                Na vývoj študenti použili technológie: MyŠQL, ŠpringBoot a Šmangular.
-                            </p>
-                            </article>
-                        </div>
+            <!-- carousel -->
+            <ol class="flex-row">
+                <li class="flex-row">
+                    <div id="projects-text">
+                        <article>
+                        <h3 class="f30px">
+                            Študentský projekt Renmo z AppsLabu
+                        </h3>
+                        <br><br>
+                        <p class="f16px">
+                            <em>Renmo</em> je softvérová aplikácia, ktorá slúži ako rezervačný systém. Užívateľ si 
+                            vie prostredníctvom systému ľahko a rýchlo zarezervovať rôzne služby, napr. objednať 
+                            sa ku kaderníkovi. V aplikácii si takisto firmy vedia nastaviť detailné informácie o 
+                            sebe a ponuku svojich služieb. Aplikácia vie uľahčiť prácu aj zamestnancom, ktorí vidia 
+                            aktívne rezervácie pre daný deň ale aj nasledujúce.
+                            <br>
+                            Na vývoj študenti použili technológie: MyŠQL, ŠpringBoot a Šmangular.
+                        </p>
+                        </article>
+                    </div>
 
-                        <img src="images/video-impostor.jpg" id="projects-image">
-                    </li>
-                </ol>
+                    <img src="images/video-impostor.jpg" id="projects-image">
+                </li>
+            </ol>
 
-                <div class="lr-buttons">
-                    <img src="images/arrows/circle-arrow-left.svg">            
-                    <img src="images/arrows/circle-arrow-right.svg">
-                </div>  
-                
-                <br>
-                <a href="https://www.youtube.com/channel/UCinIL-0-qCLU6zE5fo1SPNw" class="flex-row">
-                    Pozrite si všetky projekty <span class="text-white">.</span> <!-- white dot so that the arrow is padded a bit -->
-                    <img src="images/arrows/arrow-right-solid-lit.svg" class="icon">
-                </a>
-                <br><br>
-                <div class="division-line"></div>
-            </div>
-            <img src="images/floating-letters/o_letter.webp" class="letter-left">
-
+            <div class="lr-buttons">
+                <img src="images/arrows/circle-arrow-left.svg">            
+                <img src="images/arrows/circle-arrow-right.svg">
+            </div>  
+            
+            <br>
+            <a href="https://www.youtube.com/channel/UCinIL-0-qCLU6zE5fo1SPNw" class="flex-row">
+                Pozrite si všetky projekty <span class="text-white">.</span> <!-- white dot so that the arrow is padded a bit -->
+                <img src="images/arrows/arrow-right-solid-lit.svg" class="icon">
+            </a>
+            <br><br>
+            <div class="division-line"></div>
         </section>
 
         <!-- ninth section, what makes us special -->
         <section class="container">
-        <h1 class="center">
-            Čím sme <em>výnimoční?</em>
-        </h1>
+            <img src="images/floating-letters/a_letter.webp" id="special-letter" class="letter-left">
+            <h1 class="center">
+                Čím sme <em>výnimoční?</em>
+            </h1>
 
-        <ol id="special-list">
-            <li>
-                <img src="images/why-special/special1.svg">
-                <h2>
-                    Partnerstvo
-                </h2>
-                <p>
-                    Dáva študentom slobodu, ktorú vyvažujú zodpovednosťou. Spolupráca LabMastra a študentov je v partnerskej rovine.
-                </p>
-            </li>
-            <li>
-                <img src="images/why-special/special2.svg">
-                <h2>
-                    LabMaster
-                </h2>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur, esse!
-                </p>
-            </li>
-            <li>
-                <img src="images/why-special/special3.svg">
-                <h2>
-                    Učebný blok
-                </h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, placeat.
-                </p>
-            </li>
-            <li>
-                <img src="images/why-special/special4.svg">
-                <h2>
-                    Problem driven
-                </h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit reiciendis quae saepe laboriosam quidem? Ratione?
-                </p>
-            </li>
-            <li>
-                <img src="images/why-special/special5.svg">
-                <h2>
-                    Project driven
-                </h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ratione laudantium doloribus!
-                </p>
-            </li>
-            <li>
-                <img src="images/why-special/special6.svg">
-                <h2>
-                    Samoštúdium
-                </h2>
-                <p>
-                    Študenti trávia 80% času samoštúdiom a sú vedení k tímovej spolupráci. 20% teórie slúži iba ako odrazový mostík.
-                </p>
-            </li>
-        </ol>
+            <ol id="special-list">
+                <li>
+                    <img src="images/why-special/special1.svg">
+                    <h2>
+                        Partnerstvo
+                    </h2>
+                    <p>
+                        Dáva študentom slobodu, ktorú vyvažujú zodpovednosťou. Spolupráca LabMastra a študentov je v partnerskej rovine.
+                    </p>
+                </li>
+                <li>
+                    <img src="images/why-special/special2.svg">
+                    <h2>
+                        LabMaster
+                    </h2>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur, esse!
+                    </p>
+                </li>
+                <li>
+                    <img src="images/why-special/special3.svg">
+                    <h2>
+                        Učebný blok
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, placeat.
+                    </p>
+                </li>
+                <li>
+                    <img src="images/why-special/special4.svg">
+                    <h2>
+                        Problem driven
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit reiciendis quae saepe laboriosam quidem? Ratione?
+                    </p>
+                </li>
+                <li>
+                    <img src="images/why-special/special5.svg">
+                    <h2>
+                        Project driven
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ratione laudantium doloribus!
+                    </p>
+                </li>
+                <li>
+                    <img src="images/why-special/special6.svg">
+                    <h2>
+                        Samoštúdium
+                    </h2>
+                    <p>
+                        Študenti trávia 80% času samoštúdiom a sú vedení k tímovej spolupráci. 20% teórie slúži iba ako odrazový mostík.
+                    </p>
+                </li>
+            </ol>
+            <div class="division-line"></div>
         </section>
     
+         <!-- tenth section, get to know us -->
+         <section id="us" class="container">
+            <h1 class="center">
+                <b>Spoznaj nás</b>
+            </h1>
+            <ol id="us-grid">
+                <li>
+                    <img src="images/get-to-know/marko-hrivnak.jpg">
+                    <span class="text-gray f14px">BOARD MEMBER</span>
+                    <span id="us-grid-name">Marko Hrivnák</span>
+                    <span class="text-gray f14px">CEO</span>
+                </li>
+                <li>
+                    <img src="images/get-to-know/grishi.webp">
+                    <span class="text-gray f14px">BOARD MEMBER & EXECUTIVE TEAM</span>
+                    <span id="us-grid-name">Grigor Ayrumyan</span>
+                    <span class="text-gray f14px">Co-founder</span>
+                </li>
+                <li>
+                    <img src="images/get-to-know/matija.webp">
+                    <span class="text-gray f14px">BOARD MEMBER & EXECUTIVE TEAM</span>
+                    <span id="us-grid-name">Matija Kadanec</span>
+                    <span class="text-gray f14px">Tech Garant pre HybridLab a AppsLab</span>
+                </li>
+                <li>
+                    <img src="images/get-to-know/janic.webp">
+                    <span class="text-gray f14px">BOARD MEMBER & EXECUTIVE TEAM</span>
+                    <span id="us-grid-name">Ján Kožlej</span>
+                    <span class="text-gray f14px">Tech Garant pre GamesLab</span>
+                </li>
+                <li>
+                    <img src="images/get-to-know/veronika.webp">
+                    <span class="text-gray f14px">BOARD MEMBER</span>
+                    <span id="us-grid-name">Veronika Radobická</span>
+                </li>
+                <li>
+                    <img src="images/get-to-know/viktoria.webp">
+                    <span class="text-gray f14px">BOARD MEMBER</span>
+                    <span id="us-grid-name">Viktória Jakubovičová</span>
+                </li>
+
+            </ol>
+        </section>
+
 
     </body>
 </html>
