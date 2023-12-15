@@ -38,7 +38,7 @@
 
             h1 {
                 font-size: 40px;
-                font-weight: normal;
+                font-weight: 100;
                 line-height: 40px;
             }
             h2 {
@@ -53,16 +53,18 @@
                 font-weight: bold;
                 font-style: normal;
             }
-
+            
+            .f12px { font-size: 12px; line-height: 24px; }
             .f14px { font-size: 14px; line-height: 24px; }
             .f16px { font-size: 16px; line-height: 24px; }
+            .f18px { font-size: 18px; line-height: 24px; }
             .f30px { font-size: 30px; line-height: 30px; }
             .f35px { font-size: 35px; line-height: 35px; }
             .f40px { font-size: 40px; line-height: 40px; }
 
             .text-gray { color: #6b7d9b; }
             .text-white { color: white; }
-            
+            .text-black { color: black; }
             .text-center { text-align: center; }
 
             .lr-buttons {
@@ -93,6 +95,10 @@
             .flex-align-bottom {
                 align-self: flex-end;
             }
+            .flex-equal-size {
+                flex-basis: 0;
+                flex-grow: 1;
+            }
             .padded-around {
                 padding: 14px;
             }
@@ -103,20 +109,34 @@
             .card {
                 padding: 14px 25px 50px 25px;
                 margin: 5px;
-                flex-basis: 0;
-                flex-grow: 1;
                 position: relative;
                 border-radius: 5px;
+                animation-name: card-hover-out;
+                animation-duration: 0.2s;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards;
             }
             .card:hover {
-                box-shadow: 0 3px 20px rgb(0 0 0 / 0.1);
+                animation-name: card-hover;
+                animation-duration: 0.2s;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards;
+            }
+            @keyframes card-hover {
+                from { box-shadow: 0 0px 0px rgb(0 0 0 / 0.0); }
+                to { box-shadow: 0 3px 20px rgb(0 0 0 / 0.1); }
+            }
+            @keyframes card-hover-out {
+                from { box-shadow: 0 3px 20px rgb(0 0 0 / 0.1); }
+                to { box-shadow: 0 0px 0px rgb(0 0 0 / 0.0); }
             }
             .card:hover > .card-arrow {
-                left: 40px;
+                filter: saturate(100%);
             }
             .card-arrow {
                 position: absolute;
                 bottom: 20px;
+                filter: saturate(0%);
             }
 
             .icon {
@@ -144,6 +164,21 @@
                 margin-left: -12px;
                 margin-right: -12px;
             }
+            .blue-button {
+                background-color: #3999ff;
+                padding: 0px;
+                border: none;
+                padding: 15px 25px;
+                border-radius: 5px;
+                color: white;
+            }
+
+            footer {
+                font-size: 13px;
+                color: #50617e;
+                font-weight: 400;
+                position: relative;
+            }
 
             
             /* ------------------ header ------------------ */
@@ -153,6 +188,20 @@
             }
             #header-nav-list > * {
                 margin: 0px 15px 0px 15px;
+            }
+            #header-discord {
+                margin-left: 50px;
+                background-color: #f0f0f1;
+                padding: 5px 10px;
+                font-size: 10px;
+                font-weight: bold;
+                color: #888888;
+                height: 20px;
+                border-radius: 20px;
+                display: flex;
+                justify-items: center;
+                column-gap: 7px;
+                border: 1px solid #e4e4e4;
             }
             
             /* ------------------ section 1 "what" ------------------ */
@@ -247,11 +296,6 @@
 
             #labs {
                 margin: 150px auto;
-            }
-            #labs-text {
-                flex-grow: 1;
-                flex-basis: 0;
-                align-self: center;
             }
             #labs-list {
                 flex-grow: 2;
@@ -403,14 +447,10 @@
             }
 
             #support-image {
-                flex-basis: 0;
-                flex-grow: 1;
                 width: 50%;
             }
             #support-text {
                 padding-left: 20px;
-                flex-basis: 0;
-                flex-grow: 1;
             }
             #support-text-p {
                 padding: 30px 0px 40px 0px;
@@ -440,8 +480,6 @@
                 margin-bottom: 100px;
             }
             #instagram-item {
-                flex-basis: 0;
-                flex-grow: 1;
                 min-width: 0px;
                 position: relative;
             }
@@ -483,23 +521,67 @@
                 opacity: 50%;
             }
 
-            
+            #podcast-image {
+                width: 98%;
+                padding-left: 2%;
+            }
+            #podcast-list {
+                column-gap: 20px;
+            }
+            #podcast-paragraph {
+                width: 85%;
+            }
+            #podcast-button {
+                padding: 20px 45px;
+                font-weight: 600;
+            }
+
+            #support2023 {
+                margin-top: 150px;
+            }
+            #support2023-list {
+                flex-wrap: wrap;
+                column-gap: 45px;
+                margin: 100px 0px;
+                align-items: center;
+                justify-content: center;
+            }
+
+            #newsletter-div {
+                background-color: #d7eaff;
+                border-radius: 5px;
+                padding: 50px 50px 50px 100px;
+                margin-bottom: 150px;
+                justify-content: space-between;
+            }
+            #newsletter-input {
+                width: 550px;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+            }
+            #newsletter-send {
+                position: absolute;
+                right: 20px;
+                top: 12px;
+            }
 
         </style>
 
     </head>
-    <body> 
+    <body>
         <header class="container">
-            <p class="flex-row center padded-around">
-                Ak máš záujem študovať spolu s nami, sme tu pre teba…
-                <button>
-                    <a href="https://discord.com/invite/fjRmVdzXcU">
-                        OPENLAB COMMUNITY
-                    </a>
+            <p class="flex-row center padded-around text-black f12px">
+                <span class="flex-align-center">
+                    Ak máš záujem študovať spolu s nami, sme tu pre teba…
+                </span>
+                
+                <a href="https://discord.com/invite/fjRmVdzXcU" target="_blank" id="header-discord">
+                    <span style="min-width: fit-content;">OPENLAB COMMUNITY</span>
                     <img src="images/discord.svg">
-                </button>
+                </a>
             </p>
-            <div class="division-line"></div>
+            <div class="division-line" style="border-color: #d5e9ff;"></div>
 
             <nav class="flex-row padded-vertical fullwidth">
                 <img src="images/openlab-logo.svg">
@@ -513,11 +595,9 @@
                     <li>Časté otázky</li>
                 </ol>
             
-                <button id="header-join-button">
-                    <a href=https://openlab.sk/openlaby/">
-                        Pridajte sa k nám
-                    </a>
-                </button>    
+                <a href=https://openlab.sk/openlaby/" class="blue-button">
+                    Pridajte sa k nám
+                </a>    
             </nav>
         
         </header>
@@ -602,33 +682,33 @@
 
         <!-- fourth section, what labs? -->
         <section id="labs" class="container flex-row">
-            <h1 id="labs-text">
+            <h1 class="flex-align-center flex-equal-size">
                 V akých Laboch<br><em>možeš študovať?</em>
             </h1>
 
             <ol id="labs-list" class="flex-row">
-                <li class="card">    
+                <li class="card flex-equal-size">    
                     <h2><em>Hybrid</em>Lab</h2>
                     <p>
                         Študenti sa učia vyvíjať hybridné aplikácie v HTML, PHP, CSS, JavaScript, Ionicu, Vue a OctoberCMS.
                     </p>
-                    <img src="images/arrows/arrow-right-solid.svg" class="card-arrow">
+                    <img src="images/arrows/arrow-right-solid-lit.svg" class="card-arrow">
                 </li>
             
-                <li class="card">
+                <li class="card flex-equal-size">
                     <h2><em>Games</em>Lab</h2>
                     <p>
                         Študenti vyvíjajú mobilné hry v Unity a GDevelop, učia sa tvoriť 2D grafiku v programe Piskel, 3D grafiku v programe Blender a herný dizajn.
                     </p>
-                    <img src="images/arrows/arrow-right-solid.svg" class="card-arrow">
+                    <img src="images/arrows/arrow-right-solid-lit.svg" class="card-arrow">
                 </li>
             
-                <li class="card">
+                <li class="card flex-equal-size">
                     <h2><em>Apps</em>Lab</h2>
                     <p>
                         Študenti sa učia vyvíjať mobilné aplikácie v C# a Xamarin.forms a webové aplikácie v Java a Angular JS.
                     </p>
-                    <img src="images/arrows/arrow-right-solid.svg" class="card-arrow">
+                    <img src="images/arrows/arrow-right-solid-lit.svg" class="card-arrow">
                 </li>
             </ol>
         
@@ -656,7 +736,7 @@
                             <h2>
                                 Stredná Priemyselná Škola Elektrotechnická
                             </h2 class="flex-align-bottom">
-                            <a href="https://www.spsehalova.sk" class="flex-align-bottom"><h2>www.spsehalova.sk</h2></a>
+                            <a href="https://www.spsehalova.sk" target="_blank" class="flex-align-bottom"><h2>www.spsehalova.sk</h2></a>
                         </div>
                     </li>
                     <li id="schools-school">
@@ -672,7 +752,7 @@
                             <h2 class="flex-align-bottom">
                                 Stredná Priemyselná Škola Informačných Technológií
                             </h2>
-                            <a href="http://www.spsknm.sk/ssknm/" class="flex-align-bottom"><h2>www.spsknm.sk</h2></a>
+                            <a href="http://www.spsknm.sk/ssknm/" target="_blank" class="flex-align-bottom"><h2>www.spsknm.sk</h2></a>
                         </div>
                     </li>
                 </ol>
@@ -731,28 +811,28 @@
                     <p>
                         Odborníci z praxe, ktorí odovzdávajú študentom svoj know-how v roli mentora 5 hodín týždenne celý školský rok.
                     </p>
-                    <img src="images/arrows/arrow-right-solid.svg" class="card-arrow">
+                    <img src="images/arrows/arrow-right-solid-lit.svg" class="card-arrow">
                 </li>
                 <li class="card">
                     <h2>Firmy</h2>
                     <p>
                         Technologické firmy sú garantmi obsahu jednotlivých labov, spolupracujú so študentmi na projektoch a v rámci študentských stáží.
                     </p>
-                    <img src="images/arrows/arrow-right-solid.svg" class="card-arrow">
+                    <img src="images/arrows/arrow-right-solid-lit.svg" class="card-arrow">
                 </li>
                 <li class="card">
                     <h2>Školy</h2>
                     <p>
                         Stredné odborné školy zamerané na digitálne technológie v jednotlivých regiónoch inovujú svoje technologické vzdelávanie.
                     </p>
-                    <img src="images/arrows/arrow-right-solid.svg" class="card-arrow">
+                    <img src="images/arrows/arrow-right-solid-lit.svg" class="card-arrow">
                 </li>
                 <li class="card">
                     <h2>Študenti</h2>
                     <p>
                         Stredoškoláci so záujmom o najnovšie technológie a silnou vnútornou motiváciou učiť sa nové veci a rozvíjať svoje schopnosti.
                     </p>
-                    <img src="images/arrows/arrow-right-solid.svg" class="card-arrow">
+                    <img src="images/arrows/arrow-right-solid-lit.svg" class="card-arrow">
                 </li>
             </ol>
 
@@ -837,7 +917,7 @@
             </div>  
             
             <br>
-            <a href="https://www.youtube.com/channel/UCinIL-0-qCLU6zE5fo1SPNw" class="flex-row">
+            <a href="https://www.youtube.com/channel/UCinIL-0-qCLU6zE5fo1SPNw" target="_blank" class="flex-row">
                 Pozrite si všetky projekty <span class="text-white">.</span> <!-- white dot so that the arrow is padded a bit -->
                 <img src="images/arrows/arrow-right-solid-lit.svg" class="icon">
             </a>
@@ -957,15 +1037,15 @@
 
         <!-- eleventh section, support us -->
         <section class="container flex-row">
-            <img src="images/ludia-ludom.webp" id="support-image">
-            <div id="support-text" class="center">
+            <img src="images/ludia-ludom.webp" id="support-image" class="flex-equal-size">
+            <div id="support-text" class="center flex-equal-size">
                 <div class="f30px">
                     <b>Podporte nás</b>
                 </div>
                 <p id="support-text-p">
                     OpenLab postupne rozširujeme ako neziskový vzdelávací projekt s cieľom otvoriť OpenLab-y zamerané na rôzne IT technológie na čo najväčší počet škôl vo všetkých slovenských regiónoch. Veríme, že OpenLab bude natoľko úspešný, že sa stane štandardom vzdelávania na Slovensku!
                 </p>
-                <a href="https://www.ludialudom.sk/profil/detail/41588" class="flex-row">
+                <a href="https://www.ludialudom.sk/profil/detail/41588" target="_blank" class="flex-row">
                     Chcem podporiť <span class="text-white">.</span> <!-- white dot so that the arrow is padded a bit -->
                     <img src="images/arrows/arrow-right-solid-lit.svg" class="icon">
                 </a>
@@ -1005,7 +1085,7 @@
         <!-- thirteenth section, instagram -->
         <section>
             <ol id="instagram-list" class="flex-row">
-                <li id="instagram-item">
+                <li id="instagram-item" class="flex-equal-size">
                     <img src="images/instagram/1.jpg" id="instagram-item-image">                    
                     <a href="https://www.instagram.com/p/C0RGLijNe4t/" target="_blank" id="instagram-overlay">
                         <span id="instagram-overlay-text" class="text-white">15 days ago</span>
@@ -1013,7 +1093,7 @@
                         <div id="instagram-overlay-bg"></div>
                     </a>
                 </li>
-                <li id="instagram-item">
+                <li id="instagram-item" class="flex-equal-size">
                     <img src="images/instagram/2.jpg" id="instagram-item-image">                    
                     <a href="https://www.instagram.com/p/Cz_GJ3KtiOl/" target="_blank" id="instagram-overlay">
                         <span id="instagram-overlay-text" class="text-white">22 days ago</span>
@@ -1021,7 +1101,7 @@
                         <div id="instagram-overlay-bg"></div>
                     </a>
                 </li>
-                <li id="instagram-item">
+                <li id="instagram-item" class="flex-equal-size">
                     <img src="images/instagram/3.jpg" id="instagram-item-image">                    
                     <a href="https://www.instagram.com/p/Cz6WKvmNMHV/" target="_blank" id="instagram-overlay">
                         <span id="instagram-overlay-text" class="text-white">24 days ago</span>
@@ -1029,7 +1109,7 @@
                         <div id="instagram-overlay-bg"></div>
                     </a>
                 </li>
-                <li id="instagram-item">
+                <li id="instagram-item" class="flex-equal-size">
                     <img src="images/instagram/4.jpg" id="instagram-item-image">                    
                     <a href="https://www.instagram.com/p/Czlqeb9NsSF/" target="_blank" id="instagram-overlay">
                         <span id="instagram-overlay-text" class="text-white">1 month ago</span>
@@ -1037,7 +1117,7 @@
                         <div id="instagram-overlay-bg"></div>
                     </a>
                 </li>
-                <li id="instagram-item">
+                <li id="instagram-item" class="flex-equal-size">
                     <img src="images/instagram/5.jpg" id="instagram-item-image">                    
                     <a href="https://www.instagram.com/p/CzTh5r3qZpr/" target="_blank" id="instagram-overlay">
                         <span id="instagram-overlay-text" class="text-white">1 month ago</span>
@@ -1045,7 +1125,7 @@
                         <div id="instagram-overlay-bg"></div>
                     </a>
                 </li>
-                <li id="instagram-item">
+                <li id="instagram-item" class="flex-equal-size">
                     <img src="images/instagram/6.jpg" id="instagram-item-image">                    
                     <a href="https://www.instagram.com/p/CzEeaS2KQcX/" target="_blank" id="instagram-overlay">
                         <span id="instagram-overlay-text" class="text-white">1 month ago</span>
@@ -1056,6 +1136,149 @@
                 
             </ol>
         </section>
+
+        <!-- fourteenth section, podcast -->
+        <section class="container flex-row">
+            <div class="flex-equal-size">
+                <h1 class="padded-vertical">
+                    Nie je moderná škola<br>
+                    <em>ako moderná škola</em>
+                </h1>
+                <p id="podcast-paragraph" class="padded-vertical">
+                    Podcast Moderná škola vznikol v spolupráci s Romanom ”Yablkom” Hraškom, kde našim zámerom je rozobrať svet štandardného vzdelávania a spôsob ako môže fungovať moderné vzdelávanie v technológiach.
+                </p>
+                <ol id="podcast-list" class="flex-row padded-vertical">
+                    <li>
+                        <img src="images/podcast/youtube.svg">
+                    </li>
+                    <li>
+                        <img src="images/podcast/spotify.svg">
+                    </li>
+                    <li>
+                        <img src="images/podcast/podcast.svg">
+                    </li>
+                    <li>
+                        <img src="images/podcast/google.svg">
+                    </li>
+                </ol>
+                <div class="padded-vertical">
+                    <a href="https://openlab.sk/moderna-skola/" id="podcast-button" class="blue-button">Moderná škola</a>                     
+                </div>
+            </div>
+            <div class="flex-equal-size padded-vertical">
+                <img src="images/podcast/modern.webp" id="podcast-image">
+            </div>
+        </section>
+        
+        <!-- fifteenth section, 2023 support -->
+        <section id="support2023" class="container">
+            <h1 class="center">
+                Ďakujeme za <em>podporu v roku 2023!</em>
+            </h1>
+            <ol id="support2023-list" class="flex-row">
+                <li>
+                    <img src="images/support-2023/support1.svg" style="max-height: 65px;">
+                </li>
+                <li>
+                    <img src="images/support-2023/accenture-logo.webp" style="max-height: 45px;">
+                </li>
+                <li>
+                    <img src="images/support-2023/startitup.svg" style="max-height: 55px;">
+                </li>
+                <li>
+                    <img src="images/support-2023/support6.svg" style="max-height: 65px;">
+                </li>
+                <li>
+                    <img src="images/support-2023/superfaktura.webp" style="max-height: 80px;">
+                </li>
+                <li>
+                    <img src="images/support-2023/pontis.png" style="max-height: 65px;">
+                </li>
+                <li>
+                    <img src="images/support-2023/binary-confidence.webp" style="max-height: 85px;">
+                </li>
+                <li>
+                    <img src="images/support-2023/kontentino.png" style="max-height: 45px;">
+                </li>
+                <li>
+                    <img src="images/support-2023/impact_lab.webp" style="max-height: 55px;">
+                </li>
+                <li>
+                    <img src="images/support-2023/posam.webp" style="max-height: 65px;">
+                </li>
+                <li>
+                    <img src="images/support-2023/logo datalan.webp" style="max-height: 65px;">
+                </li>
+                <li>
+                    <img src="images/support-2023/Medirex-21024_1.webp" style="max-height: 65px;">
+                </li>
+            </ol>
+        </section>
+
+        <!-- sixteenth section, newsletter sub -->
+        <section class="container">
+            <div id="newsletter-div" class="flex-row">
+                <p class="text-black f18px">
+                    Prihláste sa do nášho newslettra a budete mať<br>
+                    <em>čerstvé informácie o živote v OpenLabe.</em>
+                </p>
+                <form style="position: relative;" class="flex-align-center">
+                    <input type="text" placeholder="Sem napíšte svoj email" id="newsletter-input">
+                    <img src="images/paper-plane-solid.svg" id="newsletter-send" class="icon">
+                </form>
+            </div>
+        </section>
+        
+        <footer>
+            <div class="container flex-row" style="justify-content: space-between; padding-bottom: 50px;">
+
+                <div class="flex-row flex-align-bottom" style="column-gap: 120px;">
+                    <!-- openlab logo -->
+                    <div class="flex-align-bottom">
+                        <img src="images/openlab-logo.svg"><br>
+                        © 2023 Všetky práva vyhradené <b>OPENLAB, o.z.,</b>
+                    </div>
+                    <!-- ICO -->
+                    <div class="flex-align-bottom">
+                        IČO: 50764675
+                        <br>
+                        Pribinova 10, 821 09 Bratislava
+                    </div>
+                    <!-- cookies gdpr -->
+                    <div class="flex-align-bottom" style="text-decoration: underline;">
+                        <a href="mailto:info@openlab.sk" style="color: #50617e">info@openlab.sk</a>
+                        <br>
+                        <div class="flex-row" style="justify-content: space-between;">
+                            <span>Cookies</span>
+                            <span><a href="./Gdpr.pdf" download style="color: #50617e">GDPR</a></span>
+                        </div>  
+                        
+                    </div>
+                </div>
+                
+                <!-- social media links -->
+                <ol class="flex-row flex-align-bottom" style="column-gap: 14px; margin-right: 20px;">
+                    <li>
+                        <a href="https://www.facebook.com/OpenLab.sk/" target="_blank">
+                            <img src="images/footer/facebook.svg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/openlab-sk/?trk=public_profile_topcard_current_company&originalSubdomain=sk/" target="_blank">
+                            <img src="images/footer/linkedin.svg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/openlab.sk?igshid=1xz2g75a3yzu1" target="_blank">
+                            <img src="images/footer/instagram.svg">
+                        </a>    
+                    </li>
+                </ol>
+                
+                <img src="images/floating-letters/footer.svg" style="position: absolute; right: -12px; bottom: 0px;">
+            </div>
+            
+        </footer>
 
     </body>
 </html>
