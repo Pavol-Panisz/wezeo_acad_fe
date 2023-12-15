@@ -75,7 +75,7 @@
 
             /* centers its child and constraints it to 1320px-wide */
             .container {
-                width: 1296px;
+                max-width: 1296px;
                 padding: 0 12px 0 12px;
                 margin: auto;
             }
@@ -401,6 +401,89 @@
                 margin-top: 10px;
                 margin-bottom: 0px;
             }
+
+            #support-image {
+                flex-basis: 0;
+                flex-grow: 1;
+                width: 50%;
+            }
+            #support-text {
+                padding-left: 20px;
+                flex-basis: 0;
+                flex-grow: 1;
+            }
+            #support-text-p {
+                padding: 30px 0px 40px 0px;
+            }
+
+            #partners {
+                padding: 150px 0px;
+            }
+            #partners-text {
+                min-width: fit-content;
+                align-self: center;
+            }
+            #partners-list-upper {
+                margin-left: 170px;
+                margin-bottom: 40px;
+                flex-wrap: wrap;
+                column-gap: 130px;
+                justify-content: space-around;
+            }
+            #partners-list-lower {
+                margin-left: 170px;
+                column-gap: 50px;
+                justify-content: center;
+            }
+
+            #instagram-list {
+                margin-bottom: 100px;
+            }
+            #instagram-item {
+                flex-basis: 0;
+                flex-grow: 1;
+                min-width: 0px;
+                position: relative;
+            }
+            #instagram-item-image {
+                width: 100%;
+
+                /* idk why, but if you comment this, the item isnt perfectly square, it has a couple pixels on the bottom outside of the image */
+                height: 100%;
+            }
+            #instagram-overlay {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                opacity: 0%;
+            }
+            #instagram-overlay:hover {
+                opacity: 100%;
+            }
+            #instagram-overlay-icon {
+                width: 30px; 
+                bottom: 5px; 
+                right:5px; 
+                position: inherit;
+                z-index: 10;
+            }
+            #instagram-overlay-text {
+                position: inherit;
+                width: 100%;
+                text-align: center;
+                bottom: 10px;
+                z-index: 10;
+            }
+            #instagram-overlay-bg {
+                background-color: black;
+                width: 100%;
+                height: 100%;
+                opacity: 50%;
+            }
+
+            
 
         </style>
 
@@ -872,6 +955,107 @@
             </ol>
         </section>
 
+        <!-- eleventh section, support us -->
+        <section class="container flex-row">
+            <img src="images/ludia-ludom.webp" id="support-image">
+            <div id="support-text" class="center">
+                <div class="f30px">
+                    <b>Podporte nás</b>
+                </div>
+                <p id="support-text-p">
+                    OpenLab postupne rozširujeme ako neziskový vzdelávací projekt s cieľom otvoriť OpenLab-y zamerané na rôzne IT technológie na čo najväčší počet škôl vo všetkých slovenských regiónoch. Veríme, že OpenLab bude natoľko úspešný, že sa stane štandardom vzdelávania na Slovensku!
+                </p>
+                <a href="https://www.ludialudom.sk/profil/detail/41588" class="flex-row">
+                    Chcem podporiť <span class="text-white">.</span> <!-- white dot so that the arrow is padded a bit -->
+                    <img src="images/arrows/arrow-right-solid-lit.svg" class="icon">
+                </a>
+
+            </div>
+        </section>
+
+        <!-- twelvth section, partners -->
+        <section id="partners" class="container flex-row">
+            <h1 id="partners-text">
+                Kto stojí<br>
+                <em>za Openlabom?</em>
+            </h1>
+            <div>
+                <ol id="partners-list-upper" class="flex-row">
+                    <li>
+                        <img src="images/partners/wezeo.svg">
+                    </li>
+                    <li>
+                        <img src="images/partners/siemens.svg">
+                    </li>
+                    <li>
+                        <img src="images/partners/spsit.svg">
+                    </li>
+                </ol>
+                <ol id="partners-list-lower" class="flex-row">
+                    <li>
+                        <img src="images/partners/spse.svg">
+                    </li>
+                    <li>
+                        <img src="images/partners/hemisfera.svg">
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- thirteenth section, instagram -->
+        <section>
+            <ol id="instagram-list" class="flex-row">
+                <li id="instagram-item">
+                    <img src="images/instagram/1.jpg" id="instagram-item-image">                    
+                    <a href="https://www.instagram.com/p/C0RGLijNe4t/" target="_blank" id="instagram-overlay">
+                        <span id="instagram-overlay-text" class="text-white">15 days ago</span>
+                        <img src="images/instagram/instagram.svg" id="instagram-overlay-icon">
+                        <div id="instagram-overlay-bg"></div>
+                    </a>
+                </li>
+                <li id="instagram-item">
+                    <img src="images/instagram/2.jpg" id="instagram-item-image">                    
+                    <a href="https://www.instagram.com/p/Cz_GJ3KtiOl/" target="_blank" id="instagram-overlay">
+                        <span id="instagram-overlay-text" class="text-white">22 days ago</span>
+                        <img src="images/instagram/instagram.svg" id="instagram-overlay-icon">
+                        <div id="instagram-overlay-bg"></div>
+                    </a>
+                </li>
+                <li id="instagram-item">
+                    <img src="images/instagram/3.jpg" id="instagram-item-image">                    
+                    <a href="https://www.instagram.com/p/Cz6WKvmNMHV/" target="_blank" id="instagram-overlay">
+                        <span id="instagram-overlay-text" class="text-white">24 days ago</span>
+                        <img src="images/instagram/instagram.svg" id="instagram-overlay-icon">
+                        <div id="instagram-overlay-bg"></div>
+                    </a>
+                </li>
+                <li id="instagram-item">
+                    <img src="images/instagram/4.jpg" id="instagram-item-image">                    
+                    <a href="https://www.instagram.com/p/Czlqeb9NsSF/" target="_blank" id="instagram-overlay">
+                        <span id="instagram-overlay-text" class="text-white">1 month ago</span>
+                        <img src="images/instagram/instagram.svg" id="instagram-overlay-icon">
+                        <div id="instagram-overlay-bg"></div>
+                    </a>
+                </li>
+                <li id="instagram-item">
+                    <img src="images/instagram/5.jpg" id="instagram-item-image">                    
+                    <a href="https://www.instagram.com/p/CzTh5r3qZpr/" target="_blank" id="instagram-overlay">
+                        <span id="instagram-overlay-text" class="text-white">1 month ago</span>
+                        <img src="images/instagram/instagram.svg" id="instagram-overlay-icon">
+                        <div id="instagram-overlay-bg"></div>
+                    </a>
+                </li>
+                <li id="instagram-item">
+                    <img src="images/instagram/6.jpg" id="instagram-item-image">                    
+                    <a href="https://www.instagram.com/p/CzEeaS2KQcX/" target="_blank" id="instagram-overlay">
+                        <span id="instagram-overlay-text" class="text-white">1 month ago</span>
+                        <img src="images/instagram/instagram.svg" id="instagram-overlay-icon">
+                        <div id="instagram-overlay-bg"></div>
+                    </a>
+                </li>
+                
+            </ol>
+        </section>
 
     </body>
 </html>
