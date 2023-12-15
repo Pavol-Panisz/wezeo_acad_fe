@@ -67,6 +67,15 @@
             .text-black { color: black; }
             .text-center { text-align: center; }
 
+            .text-hover-blue:hover {
+                color: #3597ff;
+                border-color: #3597ff;
+            }
+            .text-hover-blue:hover i {
+                border-color: #3597ff;
+            }
+
+
             .lr-buttons {
                 margin-left: auto;
             }
@@ -173,6 +182,41 @@
                 color: white;
             }
 
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: white;
+                width: 150px;
+                padding: 5px 10px;
+                border-radius: 10px;
+                z-index: 1;
+            }   
+            .dropdown-content span { /* the individual list item of the dropdown */
+                padding: 5px 0px;
+            }
+            .dropdown:hover .dropdown-content {
+                display: flex;
+                flex-direction: column;
+            }
+            .dropdown-arrow {
+                border: solid black;
+                border-width: 0 2px 2px 0;
+                display: inline-block;
+                padding: 3px;
+                margin: 4px;
+                transform: rotate(45deg);
+            }
+            .dropdown:hover .dropdown-initial {
+                color: #3597ff;
+            }
+            .dropdown:hover .dropdown-initial i {
+                border-color: #3597ff;
+            }            
+
             footer {
                 font-size: 13px;
                 color: #50617e;
@@ -187,7 +231,7 @@
                 margin-right: auto; /* since the width is 100%, it pushes the button to the right */
             }
             #header-nav-list > * {
-                margin: 0px 15px 0px 15px;
+                padding: 0px 15px 0px 15px;
             }
             #header-discord {
                 margin-left: 50px;
@@ -586,16 +630,29 @@
             <nav class="flex-row padded-vertical fullwidth">
                 <img src="images/openlab-logo.svg">
                 <ol id="header-nav-list" class="flex-row">
-                    <li>Úvod</li>
-                    <li>OpenLab</li>
-                    <li>Online hodiny</li>
-                    <li>Pre učiteľov</li>
-                    <li>Partneri</li>
-                    <li>Moderná škola</li>
-                    <li>Časté otázky</li>
+                    <li class="text-hover-blue">Úvod</li>
+                    <li class="dropdown">
+                        <span  class="dropdown-initial text-hover-blue">OpenLab <i class="dropdown-arrow"></i></span>
+                        <div class="dropdown-content">
+                            <span class="text-hover-blue">HybridLab</span>
+                            <span class="text-hover-blue">GamesLab</span>
+                            <span class="text-hover-blue">AppsLab</span>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <span class="dropdown-initial text-hover-blue">Online hodiny <i class="dropdown-arrow"></i></span>
+                        <div class="dropdown-content">
+                            <span class="text-hover-blue">Hry</span>
+                            <span class="text-hover-blue">Aplikácie</span>
+                        </div>
+                    </li>
+                    <li class="text-hover-blue">Pre učiteľov</li>
+                    <li class="text-hover-blue">Partneri</li>
+                    <li class="text-hover-blue">Moderná škola</li>
+                    <li class="text-hover-blue">Časté otázky</li>
                 </ol>
             
-                <a href=https://openlab.sk/openlaby/" class="blue-button">
+                <a href=https://openlab.sk/openlaby/" class="blue-button" style="padding: 10px 15px;">
                     Pridajte sa k nám
                 </a>    
             </nav>
