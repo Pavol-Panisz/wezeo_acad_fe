@@ -1,0 +1,218 @@
+/* -------------- general & helper classes -------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "SF Pro Display", sans-serif;
+    line-height: 24px;
+    letter-spacing: 1px;
+} 
+
+a {
+    text-decoration: none;
+    color: #3999ff;
+}
+
+p {
+    color: #50617e;
+}
+
+ol {
+    list-style: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    
+    /* so that the floating letters don't cause horizontal scrollbars */
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 100;
+    line-height: 40px;
+}
+h2 {
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 30px;
+}
+h3 {
+    font-weight: normal;
+}
+em {
+    font-weight: bold;
+    font-style: normal;
+}
+
+.f12px { font-size: 12px; line-height: 24px; }
+.f14px { font-size: 14px; line-height: 24px; }
+.f16px { font-size: 16px; line-height: 24px; }
+.f18px { font-size: 18px; line-height: 24px; }
+.f30px { font-size: 30px; line-height: 30px; }
+.f35px { font-size: 35px; line-height: 35px; }
+.f40px { font-size: 40px; line-height: 40px; }
+
+.text-gray { color: #6b7d9b; }
+.text-white { color: white; }
+.text-black { color: black; }
+.text-center { text-align: center; }
+
+.text-hover-blue:hover {
+    color: #3597ff;
+    border-color: #3597ff;
+}
+.text-hover-blue:hover i {
+    border-color: #3597ff;
+}
+
+
+.lr-buttons {
+    margin-left: auto;
+}
+.lr-buttons img {
+    width: 40px;
+
+}
+
+/* centers its child and constraints it to 1320px-wide */
+.container {
+    max-width: 1296px;
+    padding: 0 12px 0 12px;
+    margin: auto;
+}
+.center {
+    width: max-content;
+    margin: auto;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+.flex-align-center {
+    align-self: center;
+}
+.flex-align-bottom {
+    align-self: flex-end;
+}
+.flex-equal-size {
+    flex-basis: 0;
+    flex-grow: 1;
+}
+.padded-around {
+    padding: 14px;
+}
+.padded-vertical {
+    padding: 14px 0px 14px 0px;
+}
+
+.card {
+    padding: 14px 25px 50px 25px;
+    margin: 5px;
+    position: relative;
+    border-radius: 5px;
+    animation-name: card-hover-out;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.card:hover {
+    animation-name: card-hover;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes card-hover {
+    from { box-shadow: 0 0px 0px rgb(0 0 0 / 0.0); }
+    to { box-shadow: 0 3px 20px rgb(0 0 0 / 0.1); }
+}
+@keyframes card-hover-out {
+    from { box-shadow: 0 3px 20px rgb(0 0 0 / 0.1); }
+    to { box-shadow: 0 0px 0px rgb(0 0 0 / 0.0); }
+}
+.card:hover > .card-arrow {
+    filter: saturate(100%);
+}
+.card-arrow {
+    position: absolute;
+    bottom: 20px;
+    filter: saturate(0%);
+}
+
+.icon {
+    width: 20px;
+}
+.letter-right {
+    position: absolute;
+    width: 500px;
+    right: -250px;
+    margin-top: -250px;
+}
+.letter-left {
+    position: absolute;
+    width: 500px;
+    left: -250px;
+    margin-top: -250px;
+}
+.division-line {
+    border-style: solid;
+    border-width: 0px 0px 0.8px 0px;
+    border-color: lightgray;
+    
+    /* overrides the margins set by the container. */
+    /* As a result, this division line will be exactly 1320px-wide*/
+    margin-left: -12px;
+    margin-right: -12px;
+}
+.blue-button {
+    background-color: #3999ff;
+    padding: 0px;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 5px;
+    color: white;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 150px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    z-index: 1;
+}   
+.dropdown-content span { /* the individual list item of the dropdown */
+    padding: 5px 0px;
+}
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+}
+.dropdown-arrow {
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    margin: 4px;
+    transform: rotate(45deg);
+}
+.dropdown:hover .dropdown-initial {
+    color: #3597ff;
+}
+.dropdown:hover .dropdown-initial i {
+    border-color: #3597ff;
+}            
+
+footer {
+    font-size: 13px;
+    color: #50617e;
+    font-weight: 400;
+    position: relative;
+}
