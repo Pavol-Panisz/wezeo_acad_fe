@@ -1,0 +1,32 @@
+#form-grid {
+    display: grid;
+    grid-template-columns: max-content max-content max-content;
+    /* grid-template-rows: auto; */
+    padding: 50px 0px;
+}
+#form-grid > div {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#form-grid > div:nth-child(6n-2) {
+    /* background-color: rgb(243, 252, 255); */
+}
+#form-grid > div:nth-child(6n-1) {
+    /* background-color: rgb(243, 252, 255); */
+}
+#form-grid > div:nth-child(6n) {
+    /* background-color: rgb(243, 252, 255); */
+}
+
+#l-col {
+    text-align: right;
+    padding-right: 10px;
+    align-self: center;
+}
+#mid-col {
+    align-self: center;
+}
+#r-col {
+    padding-left: 70px;
+    align-self: center;
+}
