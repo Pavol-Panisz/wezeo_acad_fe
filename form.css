@@ -7,15 +7,27 @@
 #form-grid > div {
     padding-top: 5px;
     padding-bottom: 5px;
+
+    /* without this, every item in the row could have a
+       different height */
+    align-self: stretch;
 }
+
+/*  the following 3 id's cause the rows to have stripe-y colors */
 #form-grid > div:nth-child(6n-2) {
-    /* background-color: rgb(243, 252, 255); */
+    background-color: rgb(238, 249, 253);
+    padding-left: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
 #form-grid > div:nth-child(6n-1) {
-    /* background-color: rgb(243, 252, 255); */
+    background-color: rgb(238, 249, 253);
 }
 #form-grid > div:nth-child(6n) {
-    /* background-color: rgb(243, 252, 255); */
+    background-color: rgb(238, 249, 253);
+    padding-right: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 #l-col {

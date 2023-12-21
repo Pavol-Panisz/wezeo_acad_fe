@@ -5,7 +5,7 @@
     margin-right: auto; /* since the width is 100%, it pushes the button to the right */
 }
 #header-nav-list > * {
-    padding: 0px 15px 0px 15px;
+    padding: 0px 10px 0px 10px;
 }
 #header-discord {
     margin-left: 50px;
